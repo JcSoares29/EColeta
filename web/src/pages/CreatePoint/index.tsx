@@ -4,7 +4,9 @@ import { FiArrowLeft } from 'react-icons/fi';
 import { Map, TileLayer, Marker } from 'react-leaflet';
 import api from '../../services/api';
 import axios from 'axios';
-import { LeafletMouseEvent } from 'leaflet'
+import { LeafletMouseEvent } from 'leaflet';
+
+import DropZone from '../../components/Dropzone';
 
 import './styles.css';
 import logo from '../../assets/logo.svg';
@@ -155,6 +157,8 @@ const CreatePoint = () => {
 
             <form onSubmit={handleSubmit}>
                 <h1>Cadastro do <br/> ponto de coleta</h1>
+
+                <DropZone />
 
                 <fieldset>
                     <legend>
